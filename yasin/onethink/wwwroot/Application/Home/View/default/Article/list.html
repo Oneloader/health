@@ -1,0 +1,14 @@
+<volist name="list" id="data">
+	<div class="new_item_box clearfix mor_ajx" data-p="6" data-max="{$count}">
+		<a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}" class="float_left"><img src="{$data['list_images']}" alt=""></a>
+		<div class="item_right float_left">
+			<h1><a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}">标题：{$data.title}...</a></h1>
+			<p class="icon_item clearfix">
+				<span class="float_left clearfix"><img class="float_left time_icon" src="__STATIC__/yasin/new_imgs/time_icon.png" alt=""><i class="float_left">上传时间：<em>{$data.create_time|date='Y.m.d',###}</em></i></span>
+				<span class="float_left clearfix"><img class="float_left eye_icon" src="__STATIC__/yasin/new_imgs/eye_icon.png" alt=""><i class="float_left">浏览量：<em>{$data.view}</em>次</i></span>
+			</p>
+			<span class="new_text">{$data.synopsis}...</span>
+			<a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}" class="info_link"><span>查看详情</span><img src="__STATIC__/yasin/new_imgs/next_icon.png" alt=""></a>
+		</div>
+	</div>
+</volist>

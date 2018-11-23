@@ -1,0 +1,456 @@
+[ 2018-08-07T09:36:53+08:00 ] 127.0.0.1 /index.php?s=Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-07T09:36:53+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T09:36:53+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T09:36:57+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `one_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_action` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `one_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `one_action_log` [ RunTime:0.0060s ]
+SQL: INSERT INTO `one_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1533605817','admin在2018-08-07 09:36登录了后台') [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 D:\project\health2\onethink\wwwroot\Application\Common\Common\function.php 第 680 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\project\health2\onethink\wwwroot\Application\Common\Common\function.php 第 680 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `one_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1533519417 LIMIT 1   [ RunTime:0.0330s ]
+SQL: UPDATE `one_member` SET `login`=`login`+1,`last_login_time`='1533605817',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0000s ]
+
+[ 2018-08-07T09:37:03+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0050s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0030s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_action_log` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_action_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_document` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_category` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_model` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.052000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.052000s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-5.052000s ]
+SQL: select version() as v; [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-4.997000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-5.000000s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:5.000000s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-5.072000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-5.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-5.019000s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.020000s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:5.072000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-5.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-5.020000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-07T17:23:46+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `one_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `one_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `one_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY `uid` desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-08-07T17:23:47+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `one_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `one_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM one_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY `level` DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` = 1  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: groups D:\project\health2\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 232 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T17:23:50+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index/cate_id/50.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `one_model` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `list_grid` FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `one_model` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT INNER JOIN one_document_home home ON DOCUMENT.id=home.id  WHERE `status` IN ('0','1','2') AND `category_id` = '50' AND `pid` = 0 AND `model_id` = '12' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid`,DOCUMENT.id FROM one_document DOCUMENT INNER JOIN one_document_home home ON DOCUMENT.id=home.id  WHERE `status` IN ('0','1','2') AND `category_id` = '50' AND `pid` = 0 AND `model_id` = '12' ORDER BY `level` DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` IN ('12','1')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T17:23:54+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index/cate_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_category` WHERE `id` = 69 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `list_grid` FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT INNER JOIN one_document_article_details article_details ON DOCUMENT.id=article_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '69' AND `pid` = 0 AND `model_id` = '21' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid`,DOCUMENT.id FROM one_document DOCUMENT INNER JOIN one_document_article_details article_details ON DOCUMENT.id=article_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '69' AND `pid` = 0 AND `model_id` = '21' ORDER BY `level` DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` IN ('21','1')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T17:23:56+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/edit/id/59/model/21/cate_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num` FROM `one_document` WHERE `id` = 59 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`list_title`,`article`,`detail_type`,`detail_img`,`sub_title` FROM `one_document_article_details` WHERE `id` = 59 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0080s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('21','1')  [ RunTime:0.0000s ]
+SQL: SELECT `field_sort`,`attribute_list`,`attribute_alias` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `type` FROM `one_category` WHERE `id` = 69 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_picture` WHERE `status` = 1 AND `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ adminArticleEdit ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0070s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.033000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.020000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:0.020000s ]
+NOTIC: [8] Undefined index: subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T17:24:08+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/edit/id/41/model/21/cate_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num` FROM `one_document` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`list_title`,`article`,`detail_type`,`detail_img`,`sub_title` FROM `one_document_article_details` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0060s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('21','1')  [ RunTime:0.0000s ]
+SQL: SELECT `field_sort`,`attribute_list`,`attribute_alias` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `type` FROM `one_category` WHERE `id` = 69 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_picture` WHERE `status` = 1 AND `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ adminArticleEdit ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0060s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.013000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:0.013000s ]
+NOTIC: [8] Undefined index: subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-08-07T17:24:29+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0070s ]
+SQL: SELECT `status` FROM `one_document` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `one_document` SET `title`='1111111111总有一种力量让我们前行——亚信集团六周年庆典精彩回顾',`type`='2',`link_id`='0',`cover_id`='0',`name`='',`description`='',`display`='1',`deadline`='0',`view_num`='1',`create_time`='1531470660',`view`='2',`comment`='0',`level`='0',`pid`='0',`model_id`='21',`group_id`='0',`category_id`='69',`root`='0',`update_time`='1533633869',`status`='1',`position`='0' WHERE `id` = 41 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0060s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('21','1')  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: id D:\project\health2\onethink\wwwroot\Application\Admin\Model\DocumentModel.class.php 第 115 行.
+NOTIC: [2] Missing argument 1 for arr2str() D:\project\health2\onethink\wwwroot\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr D:\project\health2\onethink\wwwroot\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\project\health2\onethink\wwwroot\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\health2\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\health2\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\health2\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+SQL: UPDATE `one_document_article_details` SET `list_title`='111111111总有一种力量让我们前行——亚信集团六周年庆典精彩回顾',`sub_title`='21312312',`detail_img`='2',`article`='<div id=\"u1161\" class=\"ax_default label\" style=\"font-family:ArialMT, Arial;font-size:14px;color:#333333;\">
+	<div id=\"u1162\" class=\"text\">
+		<p>
+			测试test<span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span><span style=\"color:#333333;font-family:ArialMT, Arial;font-size:14px;\">测试test</span>
+		</p>
+	</div>
+</div>',`detail_type`='1' WHERE `id` = 41 [ RunTime:0.0000s ]
+INFO: [ documentSaveComplete ] --START--
+INFO: Run Addons\Attachment\AttachmentAddon [ RunTime:0.015000s ]
+INFO: [ documentSaveComplete ] --END-- [ RunTime:0.015000s ]
+NOTIC: [8] Undefined variable: id D:\project\health2\onethink\wwwroot\Application\Admin\Model\DocumentModel.class.php 第 126 行.
+
+[ 2018-08-07T17:24:31+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index/cate_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `list_grid` FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT INNER JOIN one_document_article_details article_details ON DOCUMENT.id=article_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '69' AND `pid` = 0 AND `model_id` = '21' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid`,DOCUMENT.id FROM one_document DOCUMENT INNER JOIN one_document_article_details article_details ON DOCUMENT.id=article_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '69' AND `pid` = 0 AND `model_id` = '21' ORDER BY `level` DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` IN ('21','1')  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

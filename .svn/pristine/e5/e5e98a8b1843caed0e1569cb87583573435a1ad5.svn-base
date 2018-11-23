@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<!--<meta property="og:type" content="article">-->
+<meta property="og:url" content="">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="/fb.jpg">
+<meta property="og:locale" content="ja_JP">
+
+<title>{:C('WEB_SITE_TITLE')}</title>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="__STATIC__/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+<block name="style"></block>
+<!--[if lt IE 9]>
+<!--<script type="text/javascript" src="__STATIC__/jquery-1.10.2.min.js"></script>/-->
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<!--<script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>-->
+<!--<![endif]-->
+
+<link rel="stylesheet" href="__STATIC__/yasin/css/reset.css">
+<link rel="stylesheet" href="__STATIC__/yasin/css/common.css">
+<link rel="stylesheet" href="__STATIC__/yasin/css/hmk_cv.css">
+<link rel="stylesheet" href="__STATIC__/yasin/css/video.css" type="text/css"/>
+<link rel="stylesheet" href="__STATIC__/yasin/css/amazeui.min.css" type="text/css"/>
+<link rel="stylesheet" href="__STATIC__/yasin/css/owl.carousel.min.css" type="text/css"/>
+<link rel="stylesheet" href="__STATIC__/yasin/css/owl.theme.default.min.css" type="text/css"/>
+<link rel='stylesheet' id='contact-form-7-css' href="__STATIC__/yasin/css/styles.css" type='text/css' media='all'/>
+<link rel='stylesheet' href="__STATIC__/yasin/css/new_styles.css" type='text/css'/>
+<link rel="stylesheet" href="__STATIC__/yasin/css/iconfont.css">
+<script src="__STATIC__/yasin/js/jquery-3.1.0.min.js"></script>
+<style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    *{margin: 0; padding: 0;}
+    .loading{position: relative;}
+    .clock{position: relative; width: 150px; height: 150px; display: inline-block;}
+    .loading .progress{position: absolute; width: 140px; height:140px; background-color: white; border-radius: 50%; left: 5px; top: 5px; line-height:150px; text-align: center;
+    }
+    .progress span{ font: 50px/2em Arial;}
+    .left,.right{width: 75px;height: 150px;overflow: hidden; position: relative; float: left;}
+    .left{ border-radius: 150px 0 0 150px;}
+    .right{ border-radius: 0 150px 150px 0;}
+    .left div,.right div{content:"";  position:absolute; display:block; width: 75px;height: 150px; background-color: white;border-radius: 150px 0 0 150px; transition:all .3s; transform-origin:right center; transform:rotateZ(-180deg);}
+    .right div{content:"";  position:absolute; display:block;   border-radius:  0 150px 150px 0;transform-origin:left center; }
+    .clock:nth-child(1) .left div,.clock:nth-child(1) .right div{
+        background-color: #5E9EBF;
+    }
+    .clock:nth-child(2) .left div,.clock:nth-child(2) .right div{
+        background-color: green;
+    }
+    .clock:nth-child(3) .left div,.clock:nth-child(3) .right div{
+        background-color: blue;
+    }
+
+
+
+
+</style>
+<link rel='stylesheet' href="__STATIC__/yasin/css/styles.css-ver=4.5.css" type='text/css' media='all'/>
+<link rel='stylesheet'  href="__STATIC__/yasin/css/new_styles.css" type='text/css'/>
+
+<!--<script type='text/javascript' src="__STATIC__/yasin/js/jquery.js"></script>
+<script type='text/javascript' src="__STATIC__/yasin/js/jquery-migrate.min.js"></script>-->
+<!-- 页面header钩子，一般用于加载插件CSS文件和代码 -->
+{:hook('pageHeader')}

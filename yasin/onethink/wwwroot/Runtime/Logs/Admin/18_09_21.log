@@ -1,0 +1,569 @@
+[ 2018-09-21T17:42:33+08:00 ] 127.0.0.1 /Admin/Article/index/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:42:33+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:42:34+08:00 ] 127.0.0.1 /Admin/Article/index/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:42:34+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:42:41+08:00 ] 127.0.0.1 /index.php?s=/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0400s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `one_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_action` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `one_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_action_log` [ RunTime:0.0370s ]
+SQL: INSERT INTO `one_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1537522960','admin在2018-09-21 17:42登录了后台') [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Common\Common\function.php 第 680 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Common\Common\function.php 第 680 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `one_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1537436560 LIMIT 1   [ RunTime:0.1220s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0100s ]
+SQL: UPDATE `one_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.0190s ]
+SQL: UPDATE `one_member` SET `login`=`login`+1,`last_login_time`='1537522960',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0010s ]
+
+[ 2018-09-21T17:42:41+08:00 ] 127.0.0.1 /index.php?s=/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0210s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_member` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_action_log` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_action_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_document` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_category` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_model` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.095000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.095000s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.095000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-21T17:42:42+08:00 ] 127.0.0.1 /index.php?s=/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `one_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `one_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_member` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `one_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Page::__construct(), called in D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\AdminController.class.php on line 418 and defined D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Page.class.php 第 42 行.
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `one_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY `uid` desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-21T17:42:43+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `one_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `one_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `one_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0410s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Page::__construct(), called in D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\AdminController.class.php on line 418 and defined D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Page.class.php 第 42 行.
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM one_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY `level` ASC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0370s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` = 1  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: groups D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 234 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: _child D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:42:59+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `list_grid` FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT INNER JOIN one_document_hospital_details hospital_details ON DOCUMENT.id=hospital_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '62' AND `pid` = 0 AND `model_id` = '22' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 4 for Think\Page::__construct(), called in D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\AdminController.class.php on line 418 and defined D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Page.class.php 第 42 行.
+SQL: SELECT `title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid`,DOCUMENT.id FROM one_document DOCUMENT INNER JOIN one_document_hospital_details hospital_details ON DOCUMENT.id=hospital_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '62' AND `pid` = 0 AND `model_id` = '22' ORDER BY `level` ASC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` IN ('22','1')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _child D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-21T17:43:06+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/edit/id/146/model/22/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0040s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num` FROM `one_document` WHERE `id` = 146 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`detail_img`,`list_title`,`article`,`video`,`detail_type`,`en_ambient`,`tech`,`ambient_img`,`list_img`,`abstract` FROM `one_document_hospital_details` WHERE `id` = 146 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0040s ]
+SQL: SELECT `pid` FROM `one_category` WHERE `id` = 62 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `one_category` WHERE `pid` = 43 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0040s ]
+SQL: SELECT h.id,h.list_title FROM one_document_hospital_details h INNER JOIN one_document as d ON h.id=d.id  WHERE d.category_id = '62' AND d.status = 1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: hospitals D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 449 行.
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0040s ]
+SQL: UPDATE `one_attribute` SET `extra`='150:ceshi
+151:ceshi1
+153:凑数1
+146:综合医院测试
+152:凑数
+' WHERE `id` = 169 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0040s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('22','1')  [ RunTime:0.0000s ]
+SQL: SELECT `field_sort`,`attribute_list`,`attribute_alias` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 461 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: _child D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+INFO: [ adminArticleEdit ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0030s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.027000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.023000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:0.023000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `one_picture` WHERE `status` = 1 AND `id` = 43 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 107 D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 244 行.
+SQL: SHOW COLUMNS FROM `one_file` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ adminArticleEdit ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.039000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.003000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:-0.008000s ]
+INFO: [ adminArticleEdit ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.042000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.003000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:-0.011000s ]
+INFO: [ UploadPic ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.062000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.034000s ]
+INFO: Run Addons\UploadPic\UploadPicAddon [ RunTime:0.020000s ]
+INFO: [ UploadPic ] --END-- [ RunTime:0.020000s ]
+NOTIC: [8] Undefined index: subtitle D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.024000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.034000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-09-21T17:43:15+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/edit/id/146/model/22/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num` FROM `one_document` WHERE `id` = 146 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`detail_img`,`list_title`,`article`,`video`,`detail_type`,`en_ambient`,`tech`,`ambient_img`,`list_img`,`abstract` FROM `one_document_hospital_details` WHERE `id` = 146 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0030s ]
+SQL: SELECT `pid` FROM `one_category` WHERE `id` = 62 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title` FROM `one_category` WHERE `pid` = 43 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0040s ]
+SQL: SELECT h.id,h.list_title FROM one_document_hospital_details h INNER JOIN one_document as d ON h.id=d.id  WHERE d.category_id = '62' AND d.status = 1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: hospitals D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 449 行.
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0040s ]
+SQL: UPDATE `one_attribute` SET `extra`='150:ceshi
+151:ceshi1
+153:凑数1
+146:综合医院测试
+152:凑数
+' WHERE `id` = 169 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0030s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('22','1')  [ RunTime:0.0010s ]
+SQL: SELECT `field_sort`,`attribute_list`,`attribute_alias` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: category_id D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\ArticleController.class.php 第 461 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: _child D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 77 行.
+INFO: [ adminArticleEdit ] --START--
+SQL: SHOW COLUMNS FROM `one_addons` [ RunTime:0.0030s ]
+SQL: SELECT `config` FROM `one_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.009000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `one_picture` WHERE `status` = 1 AND `id` = 43 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 107 D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 244 行.
+SQL: SHOW COLUMNS FROM `one_file` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ adminArticleEdit ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.004000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:-0.007000s ]
+INFO: [ adminArticleEdit ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.029000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014000s ]
+INFO: Run Addons\EditorForAdmin\EditorForAdminAddon [ RunTime:0.003000s ]
+INFO: [ adminArticleEdit ] --END-- [ RunTime:-0.011000s ]
+INFO: [ UploadPic ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.032000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017000s ]
+INFO: Run Addons\UploadPic\UploadPicAddon [ RunTime:0.003000s ]
+INFO: [ UploadPic ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: subtitle D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\761055de2f430bef08441163fbb8bda7.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-09-21T17:43:34+08:00 ] 127.0.0.1 /index.php?s=/Admin/File/uploadPicture/session_id/50rdep67a86sbjrsi6chh6nvf7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `one_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY `sort` asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `one_menu` WHERE ( pid !=0 AND url like '%File/uploadPicture%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`path`,`url`,`md5`,`sha1`,`status`,`create_time` FROM `one_picture` WHERE `md5` = 'e39d8f676bcf7dc13e196df0e21a9cb3' AND `sha1` = '1250627aee6e55e0a7a273007ed37b3ae6e9b038' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-09-21T17:43:35+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0030s ]
+SQL: SELECT `status` FROM `one_document` WHERE `id` = 146 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `one_document` SET `type`='2',`link_id`='0',`name`='',`description`='',`display`='1',`cover_id`='0',`view_num`='1',`create_time`='1537239960',`level`='0',`deadline`='0',`view`='159',`comment`='0',`pid`='0',`model_id`='22',`group_id`='0',`category_id`='62',`title`='综合医院测试',`root`='0',`update_time`='1537523015',`status`='1',`position`='0' WHERE `id` = 146 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0030s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`field`,`type`,`value`,`remark`,`is_show`,`extra`,`model_id`,`is_must`,`status`,`update_time`,`create_time`,`validate_rule`,`validate_time`,`error_info`,`validate_type`,`auto_rule`,`auto_time`,`auto_type` FROM `one_attribute` WHERE `model_id` IN ('22','1')  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: id D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Model\DocumentModel.class.php 第 115 行.
+NOTIC: [2] Missing argument 1 for arr2str() D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Common\Common\function.php 第 61 行.
+NOTIC: [8] Undefined variable: arr D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Common\Common\function.php 第 62 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+NOTIC: [2] strtotime() expects at least 1 parameter, 0 given D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Model.class.php 第 1264 行.
+SQL: UPDATE `one_document_hospital_details` SET `list_title`='综合医院测试',`abstract`='简介简介',`article`='<p>
+	综合医院测试,啊四大四大
+</p>
+<p>
+	<span>综合医院测试,啊四大四大说当发生发放时</span> 
+</p>
+<p>
+	<span>综合医院测试,啊四大四大说当发生发放时</span> 
+</p>
+<p>
+	<span>综合医院测试,啊四大四大说当发生发放时</span> 
+</p>',`list_img`='43',`detail_img`='43',`video`='1',`tech`='',`en_ambient`='',`ambient_img`='[]',`detail_type`='2' WHERE `id` = 146 [ RunTime:0.0000s ]
+INFO: [ documentSaveComplete ] --START--
+INFO: Run Addons\Attachment\AttachmentAddon [ RunTime:0.015000s ]
+INFO: [ documentSaveComplete ] --END-- [ RunTime:0.015000s ]
+NOTIC: [8] Undefined variable: id D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Model\DocumentModel.class.php 第 126 行.
+
+[ 2018-09-21T17:43:37+08:00 ] 127.0.0.1 /index.php?s=/Admin/Article/index/cate_id/62.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `one_auth_group_access` [ RunTime:0.0030s ]
+SQL: SELECT `extend_id` FROM one_auth_group_access g INNER JOIN one_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `one_category` WHERE `status` = 1 ORDER BY `pid`,`sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_model` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `list_grid` FROM `one_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0030s ]
+SQL: SELECT `name` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM one_document DOCUMENT INNER JOIN one_document_hospital_details hospital_details ON DOCUMENT.id=hospital_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '62' AND `pid` = 0 AND `model_id` = '22' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Missing argument 4 for Think\Page::__construct(), called in D:\project\l.yasin.cn\yasin\onethink\wwwroot\Application\Admin\Controller\AdminController.class.php on line 418 and defined D:\project\l.yasin.cn\yasin\onethink\wwwroot\ThinkPHP\Library\Think\Page.class.php 第 42 行.
+SQL: SELECT `title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid`,DOCUMENT.id FROM one_document DOCUMENT INNER JOIN one_document_hospital_details hospital_details ON DOCUMENT.id=hospital_details.id  WHERE `status` IN ('0','1','2') AND `category_id` = '62' AND `pid` = 0 AND `model_id` = '22' ORDER BY `level` ASC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `extend` FROM `one_model` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `one_attribute` WHERE `model_id` IN ('22','1')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _child D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+NOTIC: [8] Undefined index: current D:\project\l.yasin.cn\yasin\onethink\wwwroot\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

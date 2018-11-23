@@ -1,0 +1,573 @@
+[ 2018-07-17T09:44:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1531791870 AND ( deadline = 0 OR deadline > 1531791870 ) ORDER BY `id` DESC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 42 AND ( view_num = 1 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_home` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 11  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_file` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 46 AND ( view_num = 2 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 13  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 15  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_second_list` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_second_list`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0060s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 14  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0050s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 21  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 22  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 26  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 27  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 28  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 29  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 30  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 31  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 41 AND ( view_num = 3 ) ORDER BY 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 9  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_third_list` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_third_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 18  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 23  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 24  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 25  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 48 AND ( view_num = 4 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 16  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_fourth_list` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_fourth_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 17  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 32  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 33  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 61  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 50 AND ( view_num = 5 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 19  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_document_hospital_details` ORDER BY `id` DESC LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_document_article_details`  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 245 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 249 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 250 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 255 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 260 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 261 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 268 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 269 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 270 行.
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1531791870 AND ( deadline = 0 OR deadline > 1531791870 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-07-17T11:07:37+08:00 ] 127.0.0.1 /index.php?s=/Home/Article/hospital_lists/category/high_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0160s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `name` = 'high_list' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 64 AND `create_time` < 1531796856 AND ( deadline = 0 OR deadline > 1531796856 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_category` WHERE `id` = 64 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `pid` = 58 AND `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 64 AND `create_time` < 1531796856 AND ( deadline = 0 OR deadline > 1531796856 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-07-17T14:20:08+08:00 ] 127.0.0.1 /index.php?s=/Home/Article/hospital_lists/category/specialty_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0070s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `name` = 'specialty_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 63 AND `create_time` < 1531808408 AND ( deadline = 0 OR deadline > 1531808408 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_category` WHERE `id` = 63 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `pid` = 57 AND `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 63 AND `create_time` < 1531808408 AND ( deadline = 0 OR deadline > 1531808408 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-07-17T14:20:09+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1531808409 AND ( deadline = 0 OR deadline > 1531808409 ) ORDER BY `id` DESC  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 42 AND ( view_num = 1 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_home` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 11  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_file` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 46 AND ( view_num = 2 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 13  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 15  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_second_list` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_second_list`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0050s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 14  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 21  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 22  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 26  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 27  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 28  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 29  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 30  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 31  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 41 AND ( view_num = 3 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 9  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_third_list` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_third_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 18  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 43  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 23  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 57  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 24  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 25  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 48 AND ( view_num = 4 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 16  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_fourth_list` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_fourth_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 17  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 33  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 50 AND ( view_num = 5 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 19  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_document_hospital_details` ORDER BY `id` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `one_document_article_details`  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 245 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 249 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 250 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 255 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 260 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 261 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 268 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 269 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 270 行.
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1531808409 AND ( deadline = 0 OR deadline > 1531808409 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-07-17T14:20:12+08:00 ] 127.0.0.1 /index.php?s=/Home/Article/hospital_lists/category/colligate_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0120s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `name` = 'colligate_list' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 62 AND `create_time` < 1531808411 AND ( deadline = 0 OR deadline > 1531808411 ) ORDER BY `id` DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `one_category` WHERE `id` = 62 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `pid` = 43 AND `status` = 1 ORDER BY `sort`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` = 62 AND `create_time` < 1531808411 AND ( deadline = 0 OR deadline > 1531808411 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-07-17T17:12:09+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `one_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `create_time` < 1531818729 AND ( deadline = 0 OR deadline > 1531818729 ) ORDER BY `id` DESC  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 42 AND ( view_num = 1 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_home` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 11  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_file` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 46 AND ( view_num = 2 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 13  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 15  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document_second_list` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_second_list`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_document` [ RunTime:0.0080s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 14  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `one_category` [ RunTime:0.0060s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_picture` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 21  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 22  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 26  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 27  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 28  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 29  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 30  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 31  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 0 D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 415 行.
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 41 AND ( view_num = 3 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 9  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_third_list` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_third_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 18  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 23  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 24  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 25  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 48 AND ( view_num = 4 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 16  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_fourth_list` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`list_title`,`list_subtitle`,`list_img` FROM `one_document_fourth_list`  [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 17  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 32  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `category_id` FROM `one_document` WHERE `id` = 33  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_picture` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: information D:\project\health2\onethink\wwwroot\Application\Home\Model\DocumentModel.class.php 第 329 行.
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `category_id` = 50 AND ( view_num = 5 ) ORDER BY 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_document_home` WHERE `id` = 19  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_hospital_details` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_document_hospital_details` ORDER BY `id` DESC LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `one_document_article_details` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `one_document_article_details`  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `one_category` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `one_file` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `one_channel` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`sort`,`create_time`,`update_time`,`status`,`target` FROM `one_channel` WHERE ( status=1 ) ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: nine_url D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 131 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 245 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 249 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 250 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 255 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 260 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 261 行.
+NOTIC: [8] Undefined index: list_title D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 268 行.
+NOTIC: [8] Undefined index: list_subtitle D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 269 行.
+NOTIC: [8] Undefined index: list_img D:\project\health2\onethink\wwwroot\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 270 行.
+SQL: SELECT `id`,`name`,`title`,`pid`,`sort`,`list_row`,`meta_title`,`keywords`,`description`,`template_index`,`template_lists`,`template_detail`,`template_edit`,`model`,`model_sub`,`type`,`link_id`,`allow_publish`,`display`,`reply`,`check`,`reply_model`,`extend`,`create_time`,`update_time`,`status`,`icon`,`groups` FROM `one_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`pid`,`title`,`link_id` FROM `one_category` WHERE `status` = 1 ORDER BY `sort`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status`,`view_num`,`detail_type` FROM `one_document` WHERE `status` = 1 AND `pid` = 0 AND `category_id` IN ('1','2') AND `create_time` < 1531818729 AND ( deadline = 0 OR deadline > 1531818729 ) ORDER BY `level` DESC,`id` DESC LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

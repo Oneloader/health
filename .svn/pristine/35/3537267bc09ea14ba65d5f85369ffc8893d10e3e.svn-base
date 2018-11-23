@@ -1,0 +1,108 @@
+<extend name="Base/common"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+    <div class="lineup">
+
+        <header class="header">
+            <div class="headerBox mobile_menus">
+                <ul class="topNav">
+
+                </ul>
+            </div>
+            <div class="headerBox">
+                <p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+                <ul class="globalNav">
+                    <think:nav name="nav">
+                        <eq name="nav.pid" value="0">
+                            <li <if condition="$nav.title eq '关于我们'">class="current"</if>>
+                                <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                    <p>{$nav.title}</p>
+                                    <span>{$nav.en_title}</span>
+                                </a>
+                                <em></em>
+                                <i></i>
+                            </li>
+                        </eq>
+                    </think:nav>
+                </ul>
+                <div class="right_icons">
+                    <a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+                    <a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="top_items show">
+                <div class="center_menu clearfix">
+                    <ul class="breadcrumbed float_left">
+                        <li><a href="{:U('Index/index')}">TOP</a></li>
+                        <li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+                        <li>{$f_cate.title}</li>
+                    </ul>
+                    <div class="right_menus float_right clearfix">
+                        <ul class="small_menus float_right">
+                            <volist name="top_cate" id="current">
+                                <li <if condition="$current.id eq 56">class="active"</if>>
+                                    <if condition="$current.id eq 55"><a href="{:U('Article/contact?id=79')}"><elseif condition="$current.id eq 56"/><a href="{:U('Article/recruit?category=recruit_list')}"><else /><a href="javascript:void(0)"></if>{$current.title}</a>
+                                    <i class="icons_line"></i>
+                                </li>
+                            </volist>
+                        </ul>
+                        <i class="box_line"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="breadcrumbs"></div>
+
+        <section id="stage1" class="lineupHeading">
+            <h1>
+                <div class="img"><img src="__STATIC__/yasin/new_imgs/top_bg4.jpg" class="fit" alt="Himiko"></div>
+            </h1>
+        </section>
+
+        <div id="pjaxBody">
+            <div class="new_content">
+                <h1><span>招贤纳士</span><i>/ Invite to one's side men of wisdom and Valor</i></h1>
+                <div class="recruit_lists">
+                    <volist name="detail" id="li">
+                        <div class="recruit_item">
+                            <h1 class="recruit_link clearfix"><span class="float_left">{$li.create_time|date='Y.m.d',###}</span><em class="float_left">{$li.list_title}</em><i class="iconfont icon-icon_down_circle_o float_right"></i></h1>
+                            <div class="recruit_text clearfix">
+                                <div class="float_left recruit_left">
+                                    <p class="recruit_title">岗位职责:</p>
+                                    {$li.duty}
+                                </div>
+                                <div class="float_left recruit_right">
+                                    <p class="recruit_title">任职要求:</p>
+                                    {$li.demand}
+                                </div>
+                            </div>
+                        </div>
+                    </volist>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footerBox">
+                    <div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+                    <ul class="footerNav">
+                        <think:nav name="nav">
+                            <eq name="nav.pid" value="0">
+                                <li>
+                                    <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                        <p>{$nav.title}</p>
+                                    </a>
+                                </li>
+                            </eq>
+                        </think:nav>
+                    </ul>
+                    <div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+                    <div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</block>

@@ -1,0 +1,130 @@
+<extend name="Base/common"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+	<div class="lineup">
+		<header class="header">
+			<div class="headerBox mobile_menus">
+				<ul class="topNav">
+
+				</ul>
+			</div>
+			<div class="headerBox">
+				<p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+				<ul class="globalNav">
+					<think:nav name="nav">
+						<eq name="nav.pid" value="0">
+							<li>
+								<a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+									<p>{$nav.title}</p>
+									<span>{$nav.en_title}</span>
+								</a>
+								<em></em>
+								<i></i>
+							</li>
+						</eq>
+					</think:nav>
+				</ul>
+				<div class="right_icons">
+					<a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+					<a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+				</div>
+			</div>
+
+
+			<div class="top_items show">
+				<div class="center_menu clearfix">
+					<ul class="breadcrumbed float_left">
+						<li><a href="{:U('Index/index')}">TOP</a></li>
+						<li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+						<li>{$f_cate.title}</li>
+					</ul>
+					<div class="right_menus float_right clearfix">
+						<ul class="small_menus float_right">
+							<volist name="current_cate" id="current">
+								<li <if condition="$f_cate['title'] eq $current['title']">class="active"</if>>
+								<a href="{:U('Article/hospital_lists?category='.$current['cate_name'].'&id='.$current['cate_id'].'&pjax=container')}">{$current.title}</a>
+								<i class="icons_line"></i>
+								</li>
+							</volist>
+						</ul>
+						<i class="box_line"></i>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="breadcrumbs"></div>
+
+	<div class="top_items breadcrumbs">
+		<div class="center_menu clearfix">
+			<ul class="breadcrumbed float_left">
+				<li><a href="{:U('Index/index')}">TOP</a></li>
+				<li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+				<li><a href="javascript:void(0)">{$f_cate.title}</a></li>
+				<li>{$this.title}</li>
+			</ul>
+			<div class="right_menus float_right clearfix">
+				<ul class="small_menus float_right">
+					<volist name="current_cate" id="current">
+						<li <if condition="$f_cate['title'] eq $current['title']">class="active"</if>><a href="{:U('Article/article_lists?category='.$current['cate_name'])}">{$current.title}</a><i class="icons_line"></i></li>
+					</volist>
+				</ul>
+				<i class="box_line"></i>
+			</div>
+		</div>
+	</div>
+        <!-- Contents
+        ================================================== -->
+
+		<section class="lineupHeading new_content_box">
+			<div class="new_content">
+				<div class="info_hd">
+					<h1 class="info_hd_text">{$detail.0.list_title}</h1>
+					<p class="icon_item info_icon_item clearfix">
+						<span class="clearfix"><img class="float_left time_icon" src="__STATIC__/yasin/new_imgs/time_icon.png" alt=""><i class="float_left">上传时间：<em>{$time.create_time|date='Y.m.d',###}</em></i></span>
+						<span class="clearfix"><img class="float_left eye_icon" src="__STATIC__/yasin/new_imgs/eye_icon.png" alt=""><i class="float_left">浏览量：<em>{$time.view}</em>次</i></span>
+					</p>
+				</div>
+				<div class="info_body">
+					{$detail.0.article}
+				</div>
+				<div class="info_btm clearfix">
+					<div class="left_btn float_left">
+						<neq name="left" velue=" ">
+							<a href="{:U('Article/list_detail?id='.$left['id'].'&detail_type=1')}">上一篇：<span>{$left.list_title}</span></a>
+						</neq>
+						<neq name="right" velue=" ">
+							<a href="{:U('Article/list_detail?id='.$right['id'].'&detail_type=1')}">下一篇：<span>{$right.list_title}</span></a>
+						</neq>
+					</div>
+					<div class="right_btn float_right">
+						<p class="clearfix"><span>分享到：</span><a href=""><img src="__STATIC__/yasin/new_imgs/quan.png" alt=""></a><a href=""><img src="__STATIC__/yasin/new_imgs/wechat1.png" alt=""></a><a href=""><img src="__STATIC__/yasin/new_imgs/sina1.png" alt=""></a></p>
+						<a href="#" onclick="javascript:history.back(-1);">< 返回</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="footer">
+		<div class="footerBox">
+			<div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+			<ul class="footerNav">
+				<think:nav name="nav">
+					<eq name="nav.pid" value="0">
+						<li>
+							<a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+								<p>{$nav.title}</p>
+							</a>
+						</li>
+					</eq>
+				</think:nav>
+			</ul>
+			<div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+			<div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+		</div>
+	</footer>
+</block>

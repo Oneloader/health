@@ -1,0 +1,201 @@
+
+    <!-- 底部
+    ================================================== -->
+
+    <div class="er_code">
+        <div>
+            <div>
+                <div>
+                    <div class="contents-box">
+                        <img class="close_btn" src="__STATIC__/yasin/new_imgs/close.png" alt="">
+                        <img class="code_er" src="__STATIC__/yasin/new_imgs/code.png" alt="">
+                        <p class="scan_code">扫描二维码关注公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="__STATIC__/yasin/js/jquery.pjax.min.js"></script>
+    <script src="__STATIC__/yasin/js/common.js"></script>
+    <script src="__STATIC__/yasin/js/amazeui.min.js"></script>
+
+    <script type='text/javascript' src="__STATIC__/yasin/js/jquery.form.min.js"></script>
+    <script type='text/javascript' src="__STATIC__/yasin/js/wp-embed.min.js"></script>
+
+
+<!--&lt;!&ndash;医院详情&ndash;&gt;-->
+    <!--<script src="__STATIC__/yasin/js/owl.carousel.min.js"></script>-->
+    <!---->
+<!--&lt;!&ndash;分页&ndash;&gt;-->
+    <!--<script type="text/javascript" src="__STATIC__/yasin/js/jquery.page.js"></script>-->
+
+<!--&lt;!&ndash;首页&ndash;&gt;-->
+    <!--<script src="__STATIC__/yasin/js/pingzi_video.js" type="text/javascript" charset="utf-8"></script>-->
+    <!--<script type='text/javascript' src="__STATIC__/yasin/js/jquery.imgpreload.min.js"></script>-->
+
+
+    <script type='text/javascript'>
+
+//        $(document).pjax('a', '#pjaxBody');
+        $(document).pjax('a', '#pjaxBody');
+        $(document).on("pjax:timeout", function(event) {
+            // 阻止超时导致链接跳转事件发生
+            event.preventDefault();
+        });
+//        $(document).pjax('a', '#pjax-container');
+//        $(document).on("pjax:timeout", function(event) {
+//            // 阻止超时导致链接跳转事件发生
+//            event.preventDefault();
+//        });
+//        $('a').pjax({
+//            container: '#container', //内容替换的容器
+//            fx: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式。
+//            cache: true,  //是否使用缓存
+//            storage: true,  //是否使用本地存储
+//            titleSuffix: '' //标题后缀
+//        });
+
+        $('.recruit_lists .recruit_link').on('click',function(){
+            if($(this).parent().hasClass('show')){
+                $(this).parent().removeClass('show');
+            }else{
+                $(this).parent().addClass('show');
+            }
+        });
+
+        (function smoothscroll(){
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(smoothscroll);
+                window.scrollTo (0,currentScroll - (currentScroll/5));
+            }
+        })();
+//
+//        $(document).ready(function(){
+//            $(".globalNav li a").each(function(){
+//                $this = document.getElementById('bank');
+//                if($this==String(window.location)){
+//                    $this.addClass("current");  //hover表示被选中效果的类名
+//                }
+//            });
+//        });
+
+
+//        $('.globalNav li a').click(function(){
+//            $('.globalNav li').removeClass('current');
+//            $(this).parent().addClass('current');
+//        });
+
+//        $(document).ready(function(){
+//            $(".globalNav li:nth-child(1)").addClass('current');
+//            $(".globalNav li a").each(function(){
+//                $this = $(this);
+//                if($this[0].href==String(window.location)){
+//                    $('.globalNav li').removeClass('current');
+//                    $(this).parent().addClass('current');  //hover表示被选中效果的类名
+//                }
+//            });
+//        });
+
+
+        $(document).ready(function() {
+            $('.small_menus li a').each(function(){
+                $this = $(this);
+                if($this[0].href==String(window.location)){
+                    $('.small_menus li').removeClass('active');
+                    $(this).parent().addClass('active');  //hover表示被选中效果的类名
+                }
+            });
+        });
+//        $(document).ready(function() {
+//            $('.small_menus li a').each(function(){
+//                if($(this)[0].href==String(window.location)){
+//                    $('.small_menus li').removeClass("active");
+//                    $(this).parent().addClass('active');
+//                }
+//            });
+//        });
+
+//        $(".globalNav li:nth-child(1)").addClass('current');
+//        $('.globalNav li a').click(function(){
+//            $('.globalNav li').removeClass('current');
+//            $(this).parent().addClass('current');
+//        });
+
+//        $(".globalNav li a").on("click",function(){
+//            var the=$(this).attr("id");
+//            $(".globalNav li:nth-child("+the+")").addClass('current');
+//            $('.globalNav li a').click(function(){
+//                $('.globalNav li').removeClass('current');
+//                $(this).parent().addClass('current');
+//            });
+//        });
+
+    </script>
+
+    <script>
+        $('.show_code').click(function(){
+            $('.er_code').fadeIn(200);
+        });
+        $('.close_btn').click(function(){
+            $('.er_code').fadeOut(200);
+        });
+
+//        $(".globalNav li:nth-child(1)").addClass('current');
+//        $('.globalNav li a').click(function(){
+//            $('.globalNav li').removeClass('current');
+//            $(this).parent().addClass('current');
+//        });
+
+//        var url = $('.globalNav li a').attr('id');
+//        console.log(url);
+//        var url = window.location.href;
+//        var what = document.getElementById('bank');
+//        if (url = what){
+//            $(".globalNav li:nth-child(5)").addClass('current');
+//        }
+//        $('.globalNav li a').click(function(){
+//            $('.globalNav li').removeClass('current');
+//            $(this).parent().addClass('current');
+////        });
+//
+//        $(document).ready(function(){
+//
+//            $(".globalNav li a").each(function(){
+//                $this = document.getElementById('bank');
+//                if($this==String(window.location)){
+//                    $this.addClass("current");  //hover表示被选中效果的类名
+//                }
+//            });
+//        });
+
+//        $(".globalNav li a").on("click",function(){
+//            var the=$(this).attr("id");
+//            $(".globalNav li:nth-child("+the+")").addClass('current');
+//            $('.globalNav li a').click(function(){
+//                $('.globalNav li').removeClass('current');
+//                $(this).parent().addClass('current');
+//            });
+//        });
+
+//        if ($url = $this){
+//            $('.globalNav li a').click(function(){
+//                $(this).parent().addClass('current');
+//            });
+//        }
+
+//        var $nava=$(".globalNav");
+//        $nava.children("li").click(function(){
+//            $(this).children("a").addClass("current");
+//            $(this).siblings().children("a").removeClass("current")
+//        });
+
+    </script>
+
+<include file="Public/var"/>
+<block name="script"></block> <!-- 用于加载js代码 -->
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+	<block name="hidden"></block>
+</div>

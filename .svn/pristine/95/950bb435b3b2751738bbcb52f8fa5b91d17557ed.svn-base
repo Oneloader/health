@@ -1,0 +1,245 @@
+<extend name="Base/common"/>
+
+<block name="body">
+    <div class="lineup">
+        <header class="header  setHeaderPos">
+            <div class="headerBox mobile_menus">
+                <ul class="topNav">
+
+                </ul>
+            </div>
+            <div class="headerBox">
+                <p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+                <ul class="globalNav">
+                    <think:nav name="nav">
+                        <eq name="nav.pid" value="0">
+                            <li>
+                                <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                    <p>{$nav.title}</p>
+                                    <span>{$nav.en_title}</span>
+                                </a>
+                                <em></em>
+                                <i></i>
+                            </li>
+                        </eq>
+                    </think:nav>
+                </ul>
+                <div class="right_icons">
+                    <a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+                    <a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="top_items breadcrumbs show">
+                <div class="center_menu clearfix">
+                    <ul class="breadcrumbed float_left">
+                        <li><a href="{:U('Index/index')}">TOP</a></li>
+                        <li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+                        <li><a href="javascript:void(0)">{$f_cate.title}</a></li>
+                        <li>{$this.title}</li>
+                    </ul>
+                    <div class="right_menus float_right clearfix">
+                        <ul class="small_menus float_right">
+                            <ul class="small_menus float_right">
+                                <volist name="current_cate" id="current">
+                                    <li><a href="{:U('Article/hospital_lists?category='.$current['cate_name'].'&id='.$current['id'])}">{$current.title}</a><i class="icons_line"></i></li>
+                                </volist>
+                            </ul>
+                            <i class="box_line"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="breadcrumbs"></div>
+
+        <section id="stage1" class="lineupHeading" style="background: #ffffff;padding-bottom: 0px;">
+            <h1>
+                <div class="img"><img src="{$picture}" class="fit" alt="Himiko"></div>
+            </h1>
+        </section>
+        <div id="pjaxBody">
+            <div class="hispotal_intro">
+                <h1>{$detail.list_title}</h1>
+                <div class="intro_box">
+                    <div class="inner_texts">
+                        <p class="intro_text">{$detail.article}</p>
+                    </div>
+                </div>
+                <p class="borderButton1"><a href="javascript:void(0)">了解更多</a></p>
+
+            </div>
+            <div class="video_box">
+                <video class="hospital_videos" src="__WEBSITE__{$video}" controls="controls"></video>
+            </div>
+        </div>
+
+        <section id="stage4" class="stageContainer topLineup hospital_newBg">
+
+            <div class="head">
+                <div class="section_head_text hospital_head_text">
+                    <h2>领先技术</h2>
+                    <p>{$detail.tech}</p>
+                    <span>{$detail.en_ambient}</span>
+                </div>
+            </div>
+
+            <div class="body list_body_04 list_body_05 clearfix">
+
+                <div class="hispotal_banners01 float_right clearfix">
+                    <h3 class="right_hd">医院环境</h3>
+                    <div data-am-widget="slider" class="am-slider am-slider-default">
+                        <ul class="am-slides">
+                            <volist name="ambient_img" id="amb">
+                                <li>
+                                    <ol class="inner_sliders clearfix">
+                                        <volist name="amb" id="ambient_img">
+                                            <li class="lightbox" href="{$ambient_img.path}"><img src="{$ambient_img.path}"></li>
+                                        </volist>
+                                    </ol>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skewedBgLeft new_lefts hospitalBgLeft"></div>
+
+        </section>
+
+        <div class="doctor_list">
+            <div class="doctor_list_content">
+                <h3>卓越专家</h3>
+                <div id="owl-demo1" class="owl-carousel">
+                    <volist name="doctor" id="doc">
+                        <div class="item">
+                            <div class="players_box hover_doc_intro" data-name="{$doc.list_title}" data-skill="{$doc.seniority}"
+                                 data-intro="{$doc.expertise}" data-per="{$doc.position}">
+                                <img src="__WEBSITE__{$doc.path}" alt="">
+                            </div>
+                        </div>
+                    </volist>
+                </div>
+                <div class="doctor_intro_text">
+                    <div class="doc_box">
+                        <p><span id="data_name">{$doc.list_title}</span><em id="data_per">{$doc.position}</em></p>
+                        <span>专业资历：<em id="data_skill">{$doc.seniority}</em></span>
+                        <span>擅长：<em id="data_intro">{$doc.expertise}</em></span>
+                    </div>
+                </div>
+                <ul class="mobile_doctor">
+                    <volist name="doctor" id="doc">
+                        <li>
+                            <div class="players_box">
+                                <a href="javascript:void(0);"><img src="__WEBSITE__{$doc.path}" alt=""></a>
+                                <div class="doc_box">
+                                    <p>{$doc.list_title}<em>{$doc.position}</em></p>
+                                    <span>专业资历：<em>{$doc.seniority}</em></span>
+                                    <span>擅长：<em>{$doc.expertise}</em></span>
+                                </div>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footerBox">
+            <div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+            <ul class="footerNav">
+                <think:nav name="nav">
+                    <eq name="nav.pid" value="0">
+                        <li>
+                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                <p>{$nav.title}</p>
+                            </a>
+                        </li>
+                    </eq>
+                </think:nav>
+            </ul>
+            <div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+            <div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+        </div>
+    </footer>
+
+    <script src="__STATIC__/yasin/js/jquery-1.9.1.min.js"></script>
+    <!--医院详情-->
+    <script src="__STATIC__/yasin/js/owl.carousel.min.js"></script>
+    <script>
+
+        <!--医院详情-->
+
+
+        var owl1 = $("#owl-demo1");
+        owl1.on('initialize.owl.carousel initialized.owl.carousel ' +
+            'initialize.owl.carousel initialize.owl.carousel ' +
+            'resize.owl.carousel resized.owl.carousel ' +
+            'refresh.owl.carousel refreshed.owl.carousel ' +
+            'update.owl.carousel updated.owl.carousel ' +
+            'drag.owl.carousel dragged.owl.carousel ' +
+            'translate.owl.carousel translated.owl.carousel ' +
+            'to.owl.carousel changed.owl.carousel', function (e) {
+            $('.' + e.type)
+                .removeClass('secondary')
+                .addClass('success');
+            window.setTimeout(function () {
+                $('.' + e.type)
+                    .removeClass('success')
+                    .addClass('secondary');
+            }, 500);
+        });
+        owl1.owlCarousel({
+            loop: true,
+            nav: true,
+            navText: ["", ""],
+            lazyLoad: true,
+            autoplay: false,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            margin: 10,
+            video: true,
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                960: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.hover_doc_intro').hover(
+            function(){
+                $('#data_name').text($(this).attr('data-name'));
+                $('#data_skill').text($(this).attr('data-skill'));
+                $('#data_intro').text($(this).attr('data-intro'));
+                $('#data_per').text($(this).attr('data-per'));
+                $(this).find('img').addClass('show');
+            },function(){
+                $(this).find('img').removeClass('show');
+            }
+        );
+
+        $('.borderButton1').click(function(){
+            var inner_texts = $('.inner_texts').height();
+            $('.intro_box').css('max-height',inner_texts);
+        });
+
+
+
+    </script>
+
+</block>
+

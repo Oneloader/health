@@ -1,0 +1,90 @@
+<extend name="Base/common"/>
+
+<block name="body">
+    <div class="lineup"  style="background-image: url(__STATIC__/yasin/new_imgs/new_bg1.jpg);background-size: contain;background-repeat:  no-repeat;background-color: #e1ddda;">
+    <header class="header">
+        <div class="headerBox mobile_menus">
+            <ul class="topNav">
+
+            </ul>
+        </div>
+        <div class="headerBox">
+            <p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+            <ul class="globalNav">
+                <think:nav name="nav">
+                    <eq name="nav.pid" value="0">
+                        <li>
+                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                <p>{$nav.title}</p>
+                                <span>{$nav.en_title}</span>
+                            </a>
+                            <em></em>
+                            <i></i>
+                        </li>
+                    </eq>
+                </think:nav>
+            </ul>
+            <div class="right_icons">
+                <a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+                <a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="top_items show">
+            <div class="center_menu clearfix">
+                <ul class="breadcrumbed float_left">
+                    <li><a href="{:U('Index/index')}">TOP</a></li>
+                    <li><a href="javascript:void(0)">{$f_cate.title}</a></li>
+                    <li>{$this.title}</li>
+                </ul>
+                <div class="right_menus float_right clearfix">
+                    <ul class="small_menus float_right">
+                        <volist name="current_cate" id="current">
+                            <li <if condition="$this['title'] eq $current['title']">class="active"</if>>
+                            <a href="{:U('Article/company?id='.$current['id'].'&detail_type=1&pjax=container')}">{$current.title}</a>
+                            <i class="icons_line"></i>
+                            </li>
+                        </volist>
+                    </ul>
+                    <i class="box_line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs"></div>
+
+        <section id="stage1" class="lineupHeading">
+            <h1>
+                <div class="img"><img src="{$picture}" class="fit" alt="Himiko"></div>
+            </h1>
+        </section>
+
+        <div id="pjaxBody">
+            <div class="new_content">
+                <h1><span>{$detail.0.list_title}</span><i>/ {$detail.0.en_title}</i></h1>
+                <div class="new_bodys">
+                    {$detail.0.article}
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footerBox">
+                    <div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+                    <ul class="footerNav">
+                        <think:nav name="nav">
+                            <eq name="nav.pid" value="0">
+                                <li>
+                                    <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                        <p>{$nav.title}</p>
+                                    </a>
+                                </li>
+                            </eq>
+                        </think:nav>
+                    </ul>
+                    <div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+                    <div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</block>

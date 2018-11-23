@@ -1,0 +1,137 @@
+<extend name="Base/common"/>
+
+<block name="body">
+
+    <div class="lineup" style="background-image: url(__STATIC__/yasin/new_imgs/new_bg.jpg);background-size: contain;background-repeat: no-repeat;">
+    <header class="header">
+        <div class="headerBox mobile_menus">
+            <ul class="topNav">
+
+            </ul>
+        </div>
+        <div class="headerBox">
+            <p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+            <ul class="globalNav">
+                <think:nav name="nav">
+                    <eq name="nav.pid" value="0">
+                        <li>
+                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                <p>{$nav.title}</p>
+                                <span>{$nav.en_title}</span>
+                            </a>
+                            <em></em>
+                            <i></i>
+                        </li>
+                    </eq>
+                </think:nav>
+            </ul>
+            <div class="right_icons">
+                <a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+                <a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+            </div>
+        </div>
+
+
+        <div class="top_items show">
+            <div class="center_menu clearfix">
+                <ul class="breadcrumbed float_left">
+                    <li><a href="{:U('Index/index')}">TOP</a></li>
+                    <li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+                    <li>{$f_cate.title}</li>
+                </ul>
+                <div class="right_menus float_right clearfix">
+                    <ul class="small_menus float_right">
+                        <volist name="current_cate" id="current">
+                            <li <if condition="$f_cate['title'] eq $current['title']">class="active"</if>>
+                            <a href="{:U('Article/hospital_lists?category='.$current['cate_name'].'&id='.$current['cate_id'].'&pjax=container')}">{$current.title}</a>
+                            <i class="icons_line"></i>
+                            </li>
+                        </volist>
+                    </ul>
+                    <i class="box_line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs"></div>
+        <section id="stage1" class="lineupHeading" style="padding-bottom: 0px;">
+            <h1>
+                <div class="img"><img src="{$banner}" class="fit" alt="Himiko"></div>
+            </h1>
+        </section>
+        <div id="pjaxBody">
+            <section id="stage4" class="stageContainer current_type hospital_newBg">
+
+                <div class="head">
+                    <div class="section_head_text hospital_head_text">
+                        <h2>{$list_info.list_title}</h2>
+                        <p class="doc_en">{$list_info.en_title}</p>
+                    </div>
+                </div>
+
+                <div class="body list_body_04 doclistbg clearfix">
+                    <div class="list_box_doctor float_right clearfix">
+                        <ul class="doc_list_ul clearfix">
+                            <volist name="list" id="data">
+                                <li>
+                                    <a href="{:U('Article/hospital_detail?id='.$data['id'].'&next_title=1&detail_type=2')}"><img src="{$data.list_images}" alt=""></a>
+                                    <div class="doc_box">
+                                        <p>{$data.title}</p>
+                                        <span>{$data.abstract}...</span>
+                                        <a href="{:U('Article/hospital_detail?id='.$data['id'].'&next_title=1&detail_type=2')}" class="info_link clearfix">
+                                            <span>查看详情</span>
+                                            <i class="iconfont icon-next"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                        <article:page cate="$category['id']" listrow="$category['list_row']" />
+                        <!--<div id="pageDiv">-->
+                            <!--<div class="pageDiv">-->
+                                <!--<article:page cate="$category['id']" listrow="$category['list_row']" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="pageDiv">-->
+                        <!--</div>-->
+                        <!--<div class="onethink pagination pagination-right pagination-large">-->
+                            <!--<article:page cate="$category['id']" listrow="$category['list_row']" />-->
+                        <!--</div>-->
+                        <!--<div class="pagination">-->
+                            <!--{$page}-->
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <div class="skewedBgLeft new_lefts hospitalBgLeft"></div>
+
+            </section>
+            <footer class="footer">
+                <div class="footerBox">
+                    <div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+                    <ul class="footerNav">
+                        <think:nav name="nav">
+                            <eq name="nav.pid" value="0">
+                                <li>
+                                    <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+                                        <p>{$nav.title}</p>
+                                    </a>
+                                </li>
+                            </eq>
+                        </think:nav>
+                    </ul>
+                    <div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+                    <div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+                </div>
+            </footer>
+        </div>
+
+
+        <!--分页-->
+        <script type="text/javascript" src="__STATIC__/yasin/js/jquery.page.js"></script>
+
+    </div>
+</block>

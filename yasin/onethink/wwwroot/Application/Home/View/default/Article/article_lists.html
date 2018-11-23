@@ -1,0 +1,195 @@
+<extend name="Base/common"/>
+
+<block name="header">
+</block>
+
+<block name="body">
+	<div class="lineup">
+		<header class="header">
+			<div class="headerBox mobile_menus">
+				<ul class="topNav">
+
+				</ul>
+			</div>
+			<div class="headerBox">
+				<p class="headerLogo"><a href="http://yaxin.xinjmc.com" tppabs=""><img src="__STATIC__/yasin/new_imgs/logo.png"></a></p>
+				<ul class="globalNav">
+					<think:nav name="nav">
+						<eq name="nav.pid" value="0">
+							<li <if condition="$nav.title eq '最新资讯'">class="current"</if>>
+								<a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+									<p>{$nav.title}</p>
+									<span>{$nav.en_title}</span>
+								</a>
+								<em></em>
+								<i></i>
+							</li>
+						</eq>
+					</think:nav>
+				</ul>
+				<div class="right_icons">
+					<a href="javascript:void(0);" class="show_code"><img src="__STATIC__/yasin/new_imgs/wechat.png" alt=""></a>
+					<a href=""><img src="__STATIC__/yasin/new_imgs/sina.png" alt=""></a>
+				</div>
+			</div>
+
+			<div class="top_items show">
+				<div class="center_menu clearfix">
+					<ul class="breadcrumbed float_left">
+						<li><a href="{:U('Index/index')}">TOP</a></li>
+						<li><a href="javascript:void(0)">{$g_cate.title}</a></li>
+						<li>{$f_cate.title}</li>
+					</ul>
+					<div class="right_menus float_right clearfix">
+						<ul class="small_menus float_right">
+							<volist name="current_cate" id="current">
+								<li <if condition="$f_cate['title'] eq $current['title']">class="active"</if>><a href="{:U('Article/article_lists?category='.$current['cate_name'])}">{$current.title}</a><i class="icons_line"></i></li>
+							</volist>
+							</volist>
+						</ul>
+						<i class="box_line"></i>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<div class="breadcrumbs"></div>
+
+		<section id="stage1" class="lineupHeading">
+			<h1>
+				<div class="img"><img src="{$top_img.path}" class="fit" alt="Himiko"></div>
+			</h1>
+		</section>
+
+		<div id="pjaxBody">
+			<div class="new_content">
+				<h1><span>{$cate_name.0.title}</span><i>/ Group news</i></h1>
+				<div class="new_lists">
+					<volist name="list" id="data">
+						<div class="new_item_box clearfix mor_ajx" data-p="2" data-max="{$count}">
+							<a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}" class="float_left"><img src="{$data['list_images']}" alt=""></a>
+							<div class="item_right float_left">
+								<h1><a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}">标题：{$data.title}...</a></h1>
+								<p class="icon_item clearfix">
+									<span class="float_left clearfix"><img class="float_left time_icon" src="__STATIC__/yasin/new_imgs/time_icon.png" alt=""><i class="float_left">上传时间：<em>{$data.create_time}</em></i></span>
+									<span class="float_left clearfix"><img class="float_left eye_icon" src="__STATIC__/yasin/new_imgs/eye_icon.png" alt=""><i class="float_left">浏览量：<em>{$data.view}</em>次</i></span>
+								</p>
+								<span class="new_text">{$data.synopsis}...</span>
+								<a href="{:U('Article/list_detail?id='.$data['id'].'&detail_type=1')}" class="info_link"><span>查看详情</span><img src="__STATIC__/yasin/new_imgs/next_icon.png" alt=""></a>
+							</div>
+						</div>
+					</volist>
+				</div>
+				<p class="borderButton1"><a href="javascript:void(0)" onclick="load_more()">发现更多</a></p>
+				<input type="hidden" id="page" value="2">
+
+				<!--<div class="onethink pagination pagination-right pagination-large">-->
+				<!--<article:page cate="$category['id']" listrow="$category['list_row']" />-->
+				<!--</div>-->
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+		<div class="footerBox">
+			<div class="footerPagetop" id="footerPagetop"><a href="#top"></a></div>
+			<ul class="footerNav">
+				<think:nav name="nav">
+					<eq name="nav.pid" value="0">
+						<li>
+							<a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+								<p>{$nav.title}</p>
+							</a>
+						</li>
+					</eq>
+				</think:nav>
+			</ul>
+			<div class="footerLogo"><img src="__STATIC__/yasin/new_imgs/logo.png" alt=""></div>
+			<div class="footerCopyright">{:C(WEB_SITE_ADDRESS)}  ICP备案：{:C(WEB_SITE_ICP)}<span>{:C(WEB_SITE_COPYRIGHT)}</span></div>
+		</div>
+	</footer>
+
+	<script>
+//        function load_more() {
+//			var box=$('.mor_ajx'),max=box.attr('data-max'),p=box.attr('data-p');
+//			//容器,总页数,当前页
+//			if(p!=1&&(max==1||p>max)){ //页数超过总页数阻止运行
+//				alert('没有内容了');
+//			}
+//			var ob={
+//				p:p
+//			};
+//			var url = window.location.href;
+//			console.log(url+"&list_row="+p);
+//            $.ajax({
+//				url: url+"&p="+p,
+//                type: 'get',
+//                data: ob,
+//                dataType: 'jsonp',
+//                success: function (data) {
+//				    alert(data);
+//                    if (data.status == 1) {
+//                        console.log(data);
+//                        box.append(data.data);
+//                        box.attr('data-p', parseInt(p) + 6);//当前页+1
+//                        box.attr('data-max', data.dialog);
+//                    }
+//                }
+//            });
+//		};
+
+        function load_more() {
+            var list_row = 6;
+            var box=$('.mor_ajx'),max=box.attr('data-max'),p=box.attr('data-p');
+            var url = window.location.href;
+//            if(p>max){ //页数超过总页数阻止运行
+//				alert('没有内容了');
+//			}
+			//请求链接格式：一般处理程序文件?action="请求的操作"
+//			url += "&p=" + p;　　　　　　　　　　//参数格式&参数名=值
+			$.ajax({
+				type: "post",　　　　　　　　　　//以POST的方式发送请求
+				url: url,　　　　　　　　　　　　//上面拼凑的链接及参数
+                data: 'page='+p,
+				dataType: "json",
+				success: function (data)
+				{
+                    if (data.status == 1) {
+                        //拿到数据后用eval函数处理
+                        var outStr = data.data;
+//                        //循环取出数据，并拼接
+                        $.each(outStr,function(index) {
+                            var sigle_url = 'http://www.yasin.com/Home/Article/list_detail/id/'+outStr[index].id+'/detail_type/1.html';
+                            var htmlStr =
+								'<div class="new_item_box clearfix mor_ajx" data-p="6" data-max="'+outStr[index].count+'">'+
+								'<a href="'+sigle_url+'" class="float_left"><img src="'+outStr[index].list_images+'" alt=""></a>'+
+								'<div class="item_right float_left">'+
+								'<h1><a href="'+sigle_url+'">标题：'+outStr[index].title+'...</a></h1>'+
+								'<p class="icon_item clearfix">' +
+								'<span class="float_left clearfix">' +
+								'<img class="float_left time_icon" src="__STATIC__/yasin/new_imgs/time_icon.png" alt="">' +
+								'<i class="float_left">上传时间：<em>'+outStr[index].create_time+'</em></i></span>'+
+								'<span class="float_left clearfix"><img class="float_left eye_icon" src="__STATIC__/yasin/new_imgs/eye_icon.png" alt=""><i class="float_left">浏览量：<em>'+outStr[index].view+'</em>次</i></span>'+
+								'</p><span class="new_text">'+outStr[index].synopsis+'...</span>'+
+								'<a href="'+sigle_url+'" class="info_link"><span>查看详情</span><img src="__STATIC__/yasin/new_imgs/next_icon.png" alt=""></a>'+
+								'</div></div>';
+                            $('.new_lists').append(htmlStr);
+                        });
+                        //拼接到需要的div中
+                        box.attr('data-p', parseInt(p) + 1);//当前页+1
+                        box.attr('data-max', data.dialog);
+                    }
+					//成功获取一般处理程序响应后执行的代码
+				},
+				error: function (err)
+				{
+				    console.log(err);
+					//收到一般处理程序响应失败后执行的代码
+					alert("观看失败");
+				}
+			});
+		}
+	</script>
+</block>
